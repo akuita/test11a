@@ -1,9 +1,6 @@
-import { IsNumber, IsDate } from 'class-validator';
+import { IsNumber } from 'class-validator';
 
-export class RecordEmployeeCheckInDto {
+export class RecordEmployeeCheckInDto { // Removed unnecessary checkInTime property and updated employeeId to employee_id
   @IsNumber()
-  employeeId: number;
-
-  @IsDate()
-  checkInTime: Date;
+  employee_id: number;
 }
